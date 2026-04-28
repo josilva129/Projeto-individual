@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Wizard';
+    src: url(../fonts/WizardWorldSimplified.ttf) format('truetype');
+}
+
+body{
+    background-image: url(../image/fundo.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Wizard', sans-serif;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.campos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+.campos input{
+    padding: 13px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    background-color: #161922;
+    border: 1px solid #696B78;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.campos a{
+    color: #ffffff;
+    font-family: "Sofia Sans Condensed", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.campos a:hover{
+    color: #bac704;
+}
+
+button{
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+.primary-button{
+    background-color: #5758FF;
+    border: 1px solid #5758FF;
+}
+
+.primary-button:hover{
+    background-color: #0B163B;
+}
+
+.linha{
+    width: 100%;
+    height: 1px;
+    background-color: #696B78;
+    margin-top: 30px;
+}
+
+.cadastrar{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cadastrar h2{
+    color: #ffffff;
+    font-family: 'Wizard', sans-serif;
+}
+
+.second-button{
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.second-button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
