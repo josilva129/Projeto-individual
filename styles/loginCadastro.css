@@ -134,4 +134,19 @@ label {
     color: #000000;
 }
 
+/* PAGINA CADASTRO */
+
+.identidade{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 
