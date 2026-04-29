@@ -1,61 +1,64 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/loginCadastro.css" />
+        href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/styles/loginCadastro.css" />
 
     <title>Login</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main">
-      <div class="container">
-        <h1>CADASTRE-SE</h1>
-        <div class="campos">
+        <div class="container">
+            <h1>CADASTRE-SE</h1>
+            <div class="campos">
 
-            <label for="input_nascimento">DATA DE NASCIMENTO</label>
-            <input type="text" id="input_nascimento" />
+                <label for="input_nascimento">DATA DE NASCIMENTO</label>
+                <input type="text" id="input_nascimento" />
 
-            <label for="input_email">ENDEREÇO DE E-MAIL</label>
-            <input type="text" id="input_email" />
+                <label for="input_email">ENDEREÇO DE E-MAIL</label>
+                <input type="text" id="input_email" />
 
-            <label for="input_senha">SENHA</label>
-            <input type="password" id="input_senha" />
+                <label for="input_senha">SENHA</label>
+                <input type="password" id="input_senha" />
 
-            <label for="input_repetir_senha">REPETIR SENHA</label>
-            <input type="password" id="input_repetir_senha" />
+                <label for="input_repetir_senha">REPETIR SENHA</label>
+                <input type="password" id="input_repetir_senha" />
 
-            <div class="identidade">
-                <div class="nome">
-                    <label for="input_nome">NOME</label>
-                    <input type="password" id="input_nome" />
+                <div class="identidade">
+                    <div class="nome">
+                        <label for="input_nome">NOME</label>
+                        <input type="password" id="input_nome" />
+                    </div>
+
+                    <div class="nome">
+                        <label for="input_sobrenome">SOBRENOME</label>
+                        <input type="password" id="input_sobrenome" />
+                    </div>
                 </div>
 
-                <div class="nome">
-                    <label for="input_sobrenome">SOBRENOME</label>
-                    <input type="password" id="input_sobrenome" />
+
+                <button class="btn-button btn">CADASTRE-SE</button>
+
+                <div class="linha"></div>
+
+                <div class="cadastrar">
+                    <h2>Já tem uma conta?</h2>
+                    <a class="btn btn-a" href="login.html">ENTRAR</a>
                 </div>
             </div>
 
-
-            <button class="btn-button btn">CADASTRE-SE</button>
-
-            <div class="linha"></div>
-
-            <div class="cadastrar">
-              <h2>Já tem uma conta?</h2>
-              <a class="btn btn-a" href="login.html">ENTRAR</a>
-            </div>
         </div>
-        
-      </div>
     </div>
-  </body>
+</body>
+
 </html>

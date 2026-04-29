@@ -1,44 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/login.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Login</title>
-  </head>
-  <body>
-    <div class="main">
-      <div class="container">
-        <h1>Entrar</h1>
-        <div class="campos">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/styles/loginCadastro.css" />
 
-            <label for="input_email">ENDEREÇO DE E-MAIL</label>
-            <input type="text" id="input_email" />
+  <title>Login</title>
+</head>
 
-            <label for="input_senha">SENHA</label>
-            <input type="password" id="input_senha" />
+<body>
+  <div class="main">
+    <div class="container">
+      <h1>Entrar</h1>
+      <div class="campos">
 
-            <p><a href="#">Esqueceu a senha?</a></p>
+        <label for="input_email">ENDEREÇO DE E-MAIL</label>
+        <input type="text" id="input_email" />
 
-            <button class="btn-button btn">ENTRAR</button>
+        <label for="input_senha">SENHA</label>
+        <input type="password" id="input_senha" />
 
-            <div class="linha"></div>
+        <p><a href="#">Esqueceu a senha?</a></p>
 
-            <div class="cadastrar">
-              <h2>Não tem uma conta?</h2>
-              <a class="btn btn-a" href="cadastrar.html">CADASTRE-SE</a>
-            </div>
+        <button class="btn-button btn">ENTRAR</button>
+
+        <div class="linha"></div>
+
+        <div class="cadastrar">
+          <h2>Não tem uma conta?</h2>
+          <a class="btn btn-a" href="cadastrar.html">CADASTRE-SE</a>
         </div>
-        
       </div>
+
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
+
+<script src="./src/js/login.js"></script>
