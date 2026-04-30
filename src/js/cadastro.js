@@ -81,13 +81,33 @@ function validaRepetirSenha(){
 
 }
 
-function validaNomeSobrenome(){
+function validaNome(){
     let nome = input_nome.value
+    let mensagem = ''
+
+    if(nome == ''){
+        mensagem = 'Informe o nome'
+    }
+
+    p_mensagemNome.innerHTML = mensagem
+
+}
+
+function validaSobreNome(){
     let sobreNome = input_sobrenome.value
+    let mensagem = ''
+
+    if(sobreNome == ''){
+        mensagem = 'Informe o sobrenome'
+    }
+
+    p_mensagemSobreNome.innerHTML = mensagem
 }
 
 function cadastrar(){
     validaEmail()
     validaSenha()
     validaRepetirSenha()
+    validaNome()
+    validaSobreNome()
 }
