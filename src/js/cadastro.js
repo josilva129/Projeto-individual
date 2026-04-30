@@ -68,8 +68,26 @@ function validaSenha() {
     div_mensagem.innerHTML = mensagem
 }
 
-function entrar() {
+function validaRepetirSenha(){
+    let repetirSenha = input_repetir_senha.value
+    let senha = input_senha.value
+    let mensagem = ''
 
+    if(repetirSenha != senha){
+        mensagem = 'Confirmação inválida. As senhas devem coincidir.'
+    }
+
+    p_mensagemSenha.innerHTML = mensagem
+
+}
+
+function validaNomeSobrenome(){
+    let nome = input_nome.value
+    let sobreNome = input_sobrenome.value
+}
+
+function cadastrar(){
     validaEmail()
     validaSenha()
+    validaRepetirSenha()
 }

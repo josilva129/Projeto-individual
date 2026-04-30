@@ -22,17 +22,22 @@
             <h1>CADASTRE-SE</h1>
             <div class="campos">
 
+                
+
                 <label for="input_nascimento">DATA DE NASCIMENTO</label>
-                <input type="text" id="input_nascimento" />
+                <input type="date" id="input_nascimento" />
 
                 <label for="input_email">ENDEREÇO DE E-MAIL</label>
                 <input type="text" id="input_email" />
+                <p id="p_mensagem"></p>
 
                 <label for="input_senha">SENHA</label>
                 <input type="password" id="input_senha" />
+                <div id="div_mensagem"></div>
 
                 <label for="input_repetir_senha">REPETIR SENHA</label>
                 <input type="password" id="input_repetir_senha" />
+                <p id="p_mensagemSenha"></p>
 
                 <div class="identidade">
                     <div class="nome">
@@ -47,7 +52,7 @@
                 </div>
 
 
-                <button class="btn-button btn">CADASTRE-SE</button>
+                <button onclick="cadastrar()" class="btn-button btn">CADASTRE-SE</button>
 
                 <div class="linha"></div>
 
@@ -62,3 +67,5 @@
 </body>
 
 </html>
+
+<script src="./src/js/cadastro.js"></script>
