@@ -26,9 +26,12 @@
       gap: 25px;
     }
 
-    nav a {
+    a{
       text-decoration: none;
       color: white;
+    }
+
+    nav a {
       transition: 0.3s;
     }
 
