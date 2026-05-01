@@ -12,6 +12,7 @@ use harrypotter;
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
+    sobrenome VARCHAR(45),
     email VARCHAR(60) UNIQUE,
     senha VARCHAR(255),
     dtNascimento DATE,

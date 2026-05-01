@@ -33,14 +33,14 @@ function validaSenha() {
 
     let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-    for(let i = 0; i <= caracteres.length; i++){
+    for(let i = 0; i < caracteres.length; i++){
 
         if(senha.includes(caracteres[i])){
             validacao++
         }
     }
 
-    for(let i = 0; i <= numeros.length; i++){
+    for(let i = 0; i < numeros.length; i++){
 
         if(senha.includes(numeros[i])){
             validacao++
@@ -117,7 +117,7 @@ function cadastrar(){
     var senha = input_senha.value;
     var repSenha = input_repetir_senha.value;
     var nascimento = input_nascimento.value;
-    var casa = select_casa.value;
+    var casa = input_casa.value;
 
     console.log("Enviando dados...");
 

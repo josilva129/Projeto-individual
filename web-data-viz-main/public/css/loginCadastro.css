@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'Wizard';
-    src: url(../../public/assets/fonts/WizardWorldSimplified.ttf) format('truetype');
+    src: url(../assets/fonts/WizardWorldSimplified.ttf) format('truetype');
 }
 
 body{
-    background-image: url(../../public/assets/images/fundo.png);
+    background-image: url(../assets/images/fundo.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
