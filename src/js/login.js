@@ -30,7 +30,13 @@ function validaSenha() {
 }
 
 function entrar() {
-
     validaEmail()
     validaSenha()
+
+     if(!validaEmail() && !validaSenha()){
+        setTimeout(() => {
+            window.location.href = './home.html'
+        }, '1000')
+    }
+   
 }
