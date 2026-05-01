@@ -4,7 +4,7 @@ function validaEmail() {
     let validacao = 0
     let mensagem = ''
 
-    for (let i = 0; i <= conter.length; i++) {
+    for (let i = 0; i < conter.length; i++) {
 
         if (email.includes(conter[i])) {
             validacao++
@@ -110,4 +110,43 @@ function cadastrar(){
     validaRepetirSenha()
     validaNome()
     validaSobreNome()
+
+    var nome = input_nome.value;
+    var sobrenome = input_sobrenome.value;
+    var email = input_email.value;
+    var senha = input_senha.value;
+    var repSenha = input_repetir_senha.value;
+    var nascimento = input_nascimento.value;
+    var casa = select_casa.value;
+
+    console.log("Enviando dados...");
+
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            nomeServer: nome,
+            sobrenomeServer: sobrenome,
+            emailServer: email,
+            senhaServer: senha,
+            repSenhaServer: repSenha,
+            nascimentoServer: nascimento,
+            casaServer: casa
+        })
+    })
+    .then(function (resposta) {
+        console.log("Resposta:", resposta);
+
+        if (resposta.ok) {
+            alert("Cadastro realizado com sucesso!");
+            window.location = "login.html";
+        } else {
+            alert("Erro ao cadastrar");
+        }
+    })
+    .catch(function (erro) {
+        console.log("Erro:", erro);
+    });
 }
