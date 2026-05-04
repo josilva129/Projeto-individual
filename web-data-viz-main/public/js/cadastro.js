@@ -2,7 +2,6 @@ function validaEmail() {
     let email = input_email.value
     let conter = ['@', '.com']
     let validacao = 0
-    let mensagem = ''
 
     for (let i = 0; i < conter.length; i++) {
 
@@ -13,15 +12,17 @@ function validaEmail() {
 
     if (validacao != 2) {
         mensagem = 'Digite um endereço de e-mail válido'
+        p_mensagem.innerHTML = mensagem
+        return false
     }
 
-    p_mensagem.innerHTML = mensagem
+    p_mensagem.innerHTML = ''
+    return true
 }
 
 function validaSenha() {
     let senha = input_senha.value
     let validacao = 0
-    let mensagem = ''
 
     let caracteres = [
         '@', '#', '$', '%', '&', '*', '!', '?',
@@ -37,6 +38,7 @@ function validaSenha() {
 
         if(senha.includes(caracteres[i])){
             validacao++
+            break
         }
     }
 
@@ -44,10 +46,11 @@ function validaSenha() {
 
         if(senha.includes(numeros[i])){
             validacao++
+            break
         }
     }
 
-    if(senha.toLowerCase() && senha.toUpperCase()){
+    if(senha !== senha.toLowerCase() && senha !== senha.toUpperCase()){
         validacao++
     }
 
@@ -58,58 +61,101 @@ function validaSenha() {
     
 
     if(validacao < 4){
-        mensagem = `
-        ❌ Minimo de 8 caracteres <br>
-        ❌ Pelo menos 1 número<br>
-        ❌ Combinação de caracteres maiúsculos e minúsculos.
-        `
+        div_mensagem.innerHTML = `
+            ❌ Minimo de 8 caracteres <br>
+            ❌ Pelo menos 1 número<br>
+            ❌ Combinação de caracteres maiúsculos e minúsculos.
+            `
+        return false
     }
 
-    div_mensagem.innerHTML = mensagem
+    div_mensagem.innerHTML = ''
+    return true
 }
 
 function validaRepetirSenha(){
     let repetirSenha = input_repetir_senha.value
     let senha = input_senha.value
-    let mensagem = ''
 
     if(repetirSenha != senha){
-        mensagem = 'Confirmação inválida. As senhas devem coincidir.'
+        p_mensagemSenha.innerHTML = 'Confirmação inválida. As senhas devem coincidir.'
+        return false
     }
 
-    p_mensagemSenha.innerHTML = mensagem
+    p_mensagemSenha.innerHTML = ''
+    return true
 
 }
 
 function validaNome(){
     let nome = input_nome.value
-    let mensagem = ''
 
     if(nome == ''){
-        mensagem = 'Informe o nome'
+        p_mensagemNome.innerHTML = 'Informe o nome'
+        return false
     }
 
-    p_mensagemNome.innerHTML = mensagem
+    p_mensagemNome.innerHTML = ''
+    return true
 
 }
 
 function validaSobreNome(){
     let sobreNome = input_sobrenome.value
-    let mensagem = ''
 
     if(sobreNome == ''){
-        mensagem = 'Informe o sobrenome'
+        p_mensagemSobreNome.innerHTML = 'Informe o sobrenome'
+        return false
     }
 
-    p_mensagemSobreNome.innerHTML = mensagem
+    p_mensagemSobreNome.innerHTML = ''
+    return true
+}
+
+function validaCasa(){
+    let casa = select_casa.value;
+
+    if(casa == 'selecione'){
+        p_mensagemCasa.innerHTML = 'Informe sua casa de hogwarts'
+        return false
+    }
+
+    p_mensagemCasa.innerHTML = ''
+    return true
+}
+
+function validaNascimento(){
+    let nascimento = input_nascimento.value
+
+    if(nascimento == ''){
+        p_mensagemNascimento.innerHTML= 'Informe sua data de nascimento'
+        return false
+    } 
+
+    p_mensagemNascimento.innerHTML = ''
+    return true
 }
 
 function cadastrar(){
-    validaEmail()
-    validaSenha()
-    validaRepetirSenha()
-    validaNome()
-    validaSobreNome()
+    let emailValido = validaEmail()
+    let senhaValida = validaSenha()
+    let repetirValido = validaRepetirSenha()
+    let nomeValido = validaNome()
+    let sobrenomeValido = validaSobreNome()
+    let casaValida = validaCasa()
+    let nascimentoValido = validaNascimento()
+
+     if (
+        !emailValido ||
+        !senhaValida ||
+        !repetirValido ||
+        !nomeValido ||
+        !sobrenomeValido ||
+        !casaValida ||
+        !nascimentoValido
+    ) {
+        return
+    }
 
     var nome = input_nome.value;
     var sobrenome = input_sobrenome.value;
@@ -117,7 +163,7 @@ function cadastrar(){
     var senha = input_senha.value;
     var repSenha = input_repetir_senha.value;
     var nascimento = input_nascimento.value;
-    var casa = input_casa.value;
+    let casa = select_casa.value;
 
     console.log("Enviando dados...");
 

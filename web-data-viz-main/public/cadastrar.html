@@ -24,6 +24,7 @@
 
                 <label for="input_nascimento">DATA DE NASCIMENTO</label>
                 <input type="date" id="input_nascimento" />
+                <p id="p_mensagemNascimento"></p>
 
                 <label for="input_email">ENDEREÇO DE E-MAIL</label>
                 <input type="text" id="input_email" />
@@ -37,8 +38,14 @@
                 <input type="password" id="input_repetir_senha" />
                 <p id="p_mensagemSenha"></p>
 
-                <label for="input_casa">CASA</label>
-                <input type="text" id="input_casa" />
+                <label for="select_casa">CASA</label>
+                <select name="casa" id="select_casa">
+                    <option value="selecione">Selecione</option>
+                    <option value="grifinória">Grifinória</option>
+                    <option value="sonserina">Sonserina</option>
+                    <option value="lufaLufa">Lufa-Lufa</option>
+                    <option value="corvinal">Corvinal</option>
+                </select>
                 <p id="p_mensagemCasa"></p>
 
                 <div class="identidade">
