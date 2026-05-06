@@ -1,22 +1,59 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-   background-image: url(../assets/images/salaGrifinoria.jpg);
-   background-position: top;
-   background-repeat: no-repeat;
-   background-size: cover;
+body {
+    background-image: url(../assets/images/salaGrifinoria.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header{
-   background-color: #350803;
+header {
+    background-color: #350803;
 }
 
-.main{
-   width: 100%;
-   max-width: 1280px;
-   margin: auto;
+.main {
+    width: 100%;
+
+    max-width: 1280px;
+    margin: auto;
+    background: rgba(65, 1, 1, 0.45);
+    backdrop-filter: blur(10px);
+    margin-top: 40px;
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+}
+
+.main-header, .main-criador {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+
+}
+
+.main img {
+    height: 250px;
+
+}
+
+.main p {
+    width: 70%;
+    font-family: "Sofia Sans Condensed", sans-serif;
+    font-size: 22px;
+    text-align: justify;
+    letter-spacing: 1.5px;
+}
+
+.main-criador img {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
 }
