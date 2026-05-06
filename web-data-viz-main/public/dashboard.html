@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+   <header>
+        <div class="logo">⚡ WizardWorld</div>
+
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./home.html#casas">Casas</a></li>
+                <li><a href="./home.html#personagens">Personagens</a></li>
+                <li><a href="#">Quiz</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <div class="buttons">
+            <a class="btn login" href="./login.html">Login</a>
+            <a class="btn cadastro" href="./cadastrar.html">Cadastro</a>
+        </div>
+    </header>
+
+  <div class="main">
+    <div class="GraficosAuxiliares">
+      <div class="graficoFilmes">
+        <canvas id="filmesPopulares"></canvas>
+      </div>
+
+      <div class="graficoFeiticos">
+        <canvas id="feiticosPopulares"></canvas>
+      </div>
+
+      <div class="kpis">
+        
+          <div class="usuarios">
+            <p>Principal casa dos usuarios:</p>
+            <h1>Grifinória</h1>
+          </div>
+          <div class="totFilmes">
+            <p>Total de filmes:</p>
+            <h1>8</h1>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="graficoPrincipal">
+      <canvas id="bilheteria"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script src="/js/dashboard.js"></script>
