@@ -121,31 +121,28 @@ new Chart(ctxFeiticos, {
 
 const ctxBilheteria = document.getElementById('bilheteria');
 
-
 new Chart(ctxBilheteria, {
   type: 'line',
   data: {
     labels: [
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8"
+      "Japão",
+      "Alemanha",
+      "França",
+      "México",
+      "EUA",
+      "Brasil",
+      "Reino Unido"
     ],
     datasets: [{
-        label: 'Bilheteria mundial (US$ milhoes)',
+        label: 'Dados do Google Trends',
       data: [
-        1020,
-        926,
-        795,
-        896,
-        942,
-        934,
-        972,
-        1340
+        79,
+        81,
+        85,
+        89,
+        94,
+        97,
+        100
       ],
       borderColor: '#d4af37',
       backgroundColor: 'rgba(212, 175, 55, 0.2)',
@@ -165,7 +162,7 @@ new Chart(ctxBilheteria, {
       },
       title: {
         display: true,
-        text: 'Bilheteria dos filmes de Harry Potter',
+        text: 'Países que mais pesquisam Harry potter',
         color: '#ffffff'
       }
     },
