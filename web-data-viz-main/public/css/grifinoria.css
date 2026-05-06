@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url(../assets/images/salaGrifinoria.jpg);
+   background-position: top;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+header{
+   background-color: #350803;
+}
+
+.main{
+   width: 100%;
+   max-width: 1280px;
+   margin: auto;
+}
