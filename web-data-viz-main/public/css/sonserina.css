@@ -5,19 +5,21 @@
 }
 
 body{
-    background-image: url(../assets/images/salaCorvinal.jpg);
+    background-image: url(../assets/images/salaSonserina.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-
+header{
+    background-color: #021a06;
+}
 
 .main{
     width: 100%;
     max-width: 1280px;
     margin: auto;
-    background-color: #0f0f1a93;
+    background-color: #021a0681;
     backdrop-filter: blur(10px);
     margin-top: 40px;
     border-radius: 16px;
@@ -49,15 +51,11 @@ body{
     letter-spacing: 1.5px;
 }
 
-.main-criador img{
+.main-criador img, .main-artefato img{
     border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
 }
 
-.main-artefato img{
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
-}
 
 .card{
     height: 280px;
