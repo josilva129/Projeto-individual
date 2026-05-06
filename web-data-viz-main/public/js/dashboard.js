@@ -118,3 +118,76 @@ new Chart(ctxFeiticos, {
     }
   }
 });
+
+const ctxBilheteria = document.getElementById('bilheteria');
+
+
+new Chart(ctxBilheteria, {
+  type: 'line',
+  data: {
+    labels: [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    datasets: [{
+        label: 'Bilheteria mundial (US$ milhoes)',
+      data: [
+        1020,
+        926,
+        795,
+        896,
+        942,
+        934,
+        972,
+        1340
+      ],
+      borderColor: '#d4af37',
+      backgroundColor: 'rgba(212, 175, 55, 0.2)',
+      tension: 0.3,
+      pointBackgroundColor: '#fff',
+      pointBorderColor: '#d4af37',
+      pointRadius: 5,
+      fill: true
+    }]
+  },
+  options: {
+    responsive: true,
+
+    plugins: {
+      legend: {
+       display: false
+      },
+      title: {
+        display: true,
+        text: 'Bilheteria dos filmes de Harry Potter',
+        color: '#ffffff'
+      }
+    },
+
+    scales: {
+      x: {
+        ticks: {
+          color: '#ffffff'
+        },
+        grid: {
+          color: 'rgba(255,255,255,0.1)'
+        }
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: '#ffffff'
+        },
+        grid: {
+          color: 'rgba(255,255,255,0.1)'
+        }
+      }
+    }
+  }
+});

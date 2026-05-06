@@ -77,12 +77,32 @@ body{
 }
 
 
-
-
 .graficoPrincipal{
-  height: 300px;
+  height: 400px;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.bilheteria{
+    width: 50%;
+}
+
+.tabela{
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+}
+
+.informacoes{
+
 }
