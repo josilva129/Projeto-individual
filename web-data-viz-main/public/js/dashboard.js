@@ -162,7 +162,7 @@ new Chart(ctxBilheteria, {
       },
       title: {
         display: true,
-        text: 'Países que mais pesquisam Harry potter',
+        text: 'Países que mais pesquisam Harry potter (Ultimos 5 anos)',
         color: '#ffffff'
       }
     },
