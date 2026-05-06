@@ -95,14 +95,21 @@ body{
 
 .tabela{
     width: 50%;
-    background-color: aliceblue;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.linha{
+    display: grid;
+    grid-template-columns: 50px 1fr 120px 120px 100px;
+    padding: 10px;
+    align-items: center;
 }
 
 .cabecalho{
-    display: flex;
-    justify-content: space-around;
+    font-weight: bold;
+    background-color: #d4af37d2;
+    color: white;
 }
 
-.informacoes{
-
-}
