@@ -140,3 +140,10 @@ body {
     width: 200px;
 }
 
+#carregando{
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    display: none;
+}
+

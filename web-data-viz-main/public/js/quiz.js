@@ -175,7 +175,7 @@ function proxima() {
 
     perguntaAtual++;
 
-    if (perguntaAtual >= 9) {
+    if (perguntaAtual >= quiz.length - 1) {
         textoDoBotao = 'Finalizar quiz'
     }
 
@@ -185,12 +185,37 @@ function proxima() {
 
     } else {
 
-        let mensagem = ''
+        resultadoFinal()
+
+    }
+
+}
+
+function verificarResposta() {
+
+    let respostaMarcada =
+        document.querySelector('input[name="questao"]:checked');
+
+
+    let respostaUsuario = Number(respostaMarcada.value);
+
+    let respostaCorreta = quiz[perguntaAtual].correta;
+
+    if (respostaUsuario == respostaCorreta) {
+
+        pontuacao++
+    }
+
+}
+
+function resultadoFinal(){
+    let mensagem = ''
         let frase = ''
         let descricao = ''
 
         numeroQuestao.style.display = 'none'
         perguntas.style.display = 'none'
+        carregando.style.display = 'flex'
 
         if (pontuacao <= 3) {
             mensagem = 'Trouxa'
@@ -211,7 +236,10 @@ function proxima() {
             descricao = 'Seu nível de conhecimento é digno dos maiores bruxos da história. Você realmente conhece profundamente o universo de Harry Potter.'
         }
 
+        carregando.innerHTML = 'Carregando resultado...'
+
         setTimeout(() => {
+            carregando.style.display = 'none'
             resultado.style.display = 'flex'
             titulo.innerHTML = mensagem
             acertos.innerHTML = `Você teve ${pontuacao} acertos`
@@ -219,28 +247,6 @@ function proxima() {
             desc.innerHTML = descricao
         }, 2000)
 
-    }
-
-
 }
-
-function verificarResposta() {
-
-    let respostaMarcada =
-        document.querySelector('input[name="questao"]:checked');
-
-
-    let respostaUsuario = Number(respostaMarcada.value);
-
-    let respostaCorreta = quiz[perguntaAtual].correta;
-
-    if (respostaUsuario == respostaCorreta) {
-
-        pontuacao++
-    }
-
-
-}
-
 
 carregarPergunta();
