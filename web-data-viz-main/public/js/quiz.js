@@ -157,6 +157,11 @@ function carregarPergunta() {
 
     document.getElementById('alt4').innerHTML =
         quiz[perguntaAtual].alternativas[3];
+
+    op1.checked = false
+    op2.checked = false
+    op3.checked = false
+    op4.checked = false
 }
 
 function proxima() {
