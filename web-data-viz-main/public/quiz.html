@@ -34,35 +34,35 @@
 
     <div class="main">
         <div class="quiz">
-            <h1>QUESTÃO 1</h1>
+            <h1 id="numeroQuestao"></h1>
             
             <div class="perguntas">
                 <div class="imagem">
-                    <h2>"Qual destes objetos foi destruído para eliminar uma das Horcruxes de Voldemort?"</h2>
+                    <h2 id="perguntasDinamicas"></h2>
                 </div>
 
                 <div class="alternativas">
                     <div class="opcao">
-                        <input type="radio" name="questao" id="op1">
-                        <label for="op1">Espada de Godric Gryffindor</label>
+                        <input type="radio" name="questao" id="op1" value='0'>
+                        <label for="op1" id="alt1"></label>
                     </div>
 
                     <div class="opcao">
-                        <input type="radio"  name="questao" id="op2">
-                        <label for="op2">O diário de Tom Riddle</label>
+                        <input type="radio"  name="questao" id="op2" value='1'>
+                        <label for="op2" id="alt2"></label>
                     </div>
 
                     <div class="opcao">
-                        <input type="radio"  name="questao" id="op3">
-                        <label for="op3">A Varinha das Varinhas</label>
+                        <input type="radio"  name="questao" id="op3" value='2'>
+                        <label for="op3" id="alt3"></label>
                     </div>
 
                     <div class="opcao">
-                        <input type="radio"  name="questao" id="op4">
-                        <label for="op4">O Mapa do Maroto</label>
+                        <input type="radio"  name="questao" id="op4" value='3'>
+                        <label for="op4" id="alt4"></label>
                     </div>
 
-                    <button>Proxima pergunta</button>
+                    <button onclick="proxima()" id="textoBotao"></button>
                 </div>
             </div>
 
