@@ -164,7 +164,7 @@ function proxima() {
     let respostaMarcada =
         document.querySelector('input[name="questao"]:checked');
 
-        if (respostaMarcada == null) {
+    if (respostaMarcada == null) {
 
         alert("Escolha uma alternativa");
 
@@ -175,7 +175,7 @@ function proxima() {
 
     perguntaAtual++;
 
-    if(perguntaAtual >= 9){
+    if (perguntaAtual >= 9) {
         textoDoBotao = 'Finalizar quiz'
     }
 
@@ -185,16 +185,46 @@ function proxima() {
 
     } else {
 
+        let mensagem = ''
+        let frase = ''
+        let descricao = ''
+
+        numeroQuestao.style.display = 'none'
+        perguntas.style.display = 'none'
+
+        if (pontuacao <= 3) {
+            mensagem = 'Trouxa'
+            frase = 'Você não é capaz de estudar em Hogwarts'
+            descricao = 'Seu conhecimento sobre o mundo mágico ainda é muito baixo. Talvez seja hora de assistir novamente aos filmes e explorar mais sobre Hogwarts.'
+
+        } else if (pontuacao <= 6) {
+            mensagem = 'Bruxo iniciante'
+            frase = 'Você está começando sua jornada mágica'
+            descricao = 'Você já conhece algumas partes importantes do universo de Harry Potter, mas ainda possui muito a aprender para se tornar um grande bruxo.'
+        } else if (pontuacao <= 8) {
+            mensagem = 'Aluno de Hogwarts'
+            frase = 'Seu conhecimento mágico impressiona'
+            descricao = 'Você demonstra conhecer bem o universo de Harry Potter e certamente seria um ótimo aluno em Hogwarts.'
+        } else {
+            mensagem = 'Mestre das reliquias'
+            frase = 'Você domina o mundo mágico'
+            descricao = 'Seu nível de conhecimento é digno dos maiores bruxos da história. Você realmente conhece profundamente o universo de Harry Potter.'
+        }
+
         setTimeout(() => {
-            alert(pontuacao)
-        },2000)
+            resultado.style.display = 'flex'
+            titulo.innerHTML = mensagem
+            acertos.innerHTML = `Você teve ${pontuacao} acertos`
+            fra.innerHTML = frase
+            desc.innerHTML = descricao
+        }, 2000)
 
     }
 
-   
+
 }
 
-function verificarResposta(){
+function verificarResposta() {
 
     let respostaMarcada =
         document.querySelector('input[name="questao"]:checked');
@@ -204,10 +234,10 @@ function verificarResposta(){
 
     let respostaCorreta = quiz[perguntaAtual].correta;
 
-    if(respostaUsuario == respostaCorreta){
+    if (respostaUsuario == respostaCorreta) {
 
-       pontuacao++
-    } 
+        pontuacao++
+    }
 
 
 }
