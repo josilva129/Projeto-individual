@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/quiz.css">
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
     <title>Quiz - Harry Potter</title>
 </head>
@@ -20,7 +21,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#casas">Casas</a></li>
                 <li><a href="#personagens">Personagens</a></li>
-                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./telaQuiz.html">Quiz</a></li>
                 <li><a href="./dashboard.html">Dashboard</a></li>
             </ul>
         </nav>
@@ -31,10 +32,43 @@
         </div>
     </header>
 
-    
+    <div class="main">
+        <div class="quiz">
+            <h1>QUESTÃO 1</h1>
+            
+            <div class="perguntas">
+                <div class="imagem">
+                    <h2>"Qual destes objetos foi destruído para eliminar uma das Horcruxes de Voldemort?"</h2>
+                </div>
+
+                <div class="alternativas">
+                    <div class="opcao">
+                        <input type="radio" name="questao" id="op1">
+                        <label for="op1">Espada de Godric Gryffindor</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio"  name="questao" id="op2">
+                        <label for="op2">O diário de Tom Riddle</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio"  name="questao" id="op3">
+                        <label for="op3">A Varinha das Varinhas</label>
+                    </div>
+
+                    <div class="opcao">
+                        <input type="radio"  name="questao" id="op4">
+                        <label for="op4">O Mapa do Maroto</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
 </html>
 
-<script src="js/home.js"></script>
+<script src="/js/quiz.js"></script>

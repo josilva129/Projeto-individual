@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Wizard';
+    src: url(../assets/fonts/WizardWorldSimplified.ttf) format('truetype');
+}
+
+body {
+    background-color: #F9F4F2;
+}
+
+.main {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: calc(100vh - 80px);
+
+}
+
+.quiz {
+    background-image: url(../assets/images/fundoQuiz.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    min-height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz h1 {
+    font-family: 'Wizard';
+    padding-bottom: 40px;
+}
+
+.quiz p {
+    width: 40%;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.quiz span{
+    margin-bottom: 20px;
+    color: #80808093;
+}
+
+.quiz a {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #d4af37;
+    color: #000000;
+    border: 1px solid #d4af37;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.quiz a:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
