@@ -40,7 +40,6 @@ function entrar() {
     var senhaVar = input_senha.value
     
      if(emailValido && senhaValida){
-        setTimeout(() => {
 
             fetch("usuarios/autenticar", {
         method: 'POST',
@@ -74,6 +73,7 @@ function entrar() {
 
             resposta.text().then(texto => {
                 console.log(texto);
+                div_mensagem.innerHTML = 'Login incorreto'
             });
         }
     }).catch(function(erro) {
@@ -81,8 +81,7 @@ function entrar() {
     })
 
     return false;
-            
-        }, 1000)
+        
     }
 
     

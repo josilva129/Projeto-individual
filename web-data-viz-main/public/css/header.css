@@ -1,99 +1,105 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    header {
-      background-color: #0f0f1a;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 1px 1px 10px #00000098 ;
-    }
+header {
+  background-color: #0f0f1a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 1px 1px 10px #00000098;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #d4af37;
-    }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d4af37;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-    a{
-      text-decoration: none;
-      color: white;
-    }
+a {
+  text-decoration: none;
+  color: white;
+}
 
-    nav a {
-      transition: 0.3s;
-    }
+nav a {
+  transition: 0.3s;
+}
 
-    nav a:hover {
-      color: #d4af37;
-    }
+nav a:hover {
+  color: #d4af37;
+}
 
-    .buttons {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .btn {
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
-    .login {
-      background-color: transparent;
-      color: white;
-      border: 1px solid #ffffff;
-      transition: 0.2s;
-    }
+.login {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ffffff;
+  transition: 0.2s;
+}
 
-    .login:hover{
-      background-color: #ffffff;
-      color: #000000;
-    }
+.login:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
-    .cadastro, .sair {
-      background-color: #d4af37;
-      color: #000000;
-      border: 1px solid #d4af37;
-      transition: 0.2s;
-    }
+.cadastro,
+.sair {
+  background-color: #d4af37;
+  color: #000000;
+  border: 1px solid #d4af37;
+  transition: 0.2s;
+}
 
-    .cadastro:hover, .sair:hover{
-      background-color: transparent;
-      color: #ffffff;
-    }
+.cadastro:hover,
+.sair:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.oculto {
+  display: none;
+}
 
 
 
-@media screen and (max-width: 745px){
-    .logo{
-      display: none;
-    }
+@media screen and (max-width: 745px) {
+  .logo {
+    display: none;
+  }
 
 }
 
-@media screen and (max-width: 510px){
+@media screen and (max-width: 510px) {
 
-  .buttons{
+  .buttons {
     flex-direction: column;
     margin-left: 25px;
   }

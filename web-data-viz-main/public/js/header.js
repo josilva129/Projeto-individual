@@ -1,6 +1,4 @@
 
-
-
 function validado(){
 
     let btnSair = document.querySelector('.sair')
@@ -9,9 +7,9 @@ function validado(){
     let permitido = acessoPermitido()
 
     if(permitido){
-        buttons.style.display = 'none'
+        buttons.classList.add('oculto')
     } else {
-        btnSair.style.display = 'none'
+        btnSair.classList.add('oculto')
     }
 }
 
