@@ -199,7 +199,21 @@ function validado() {
   return true
 }
 
+function buscarCasa(){
+  fetch("/dashboard/casaUsuarios")
+  .then(function(resposta){
+    return resposta.json();
+  })
+
+  .then(function(dados){
+    console.log(dados);
+
+    document.getElementById('casaUsuarios').innerHTML = dados[0].casa;
+  })
+}
+
 validado()
+buscarCasa()
 
 
 

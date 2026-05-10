@@ -38,7 +38,7 @@ function cadastrar(req, res) {
     var senha = req.body.senhaServer;
     var repSenha = req.body.repSenhaServer;
     var dtNascimento = req.body.nascimentoServer;
-    var casa = req.body.casaServer;
+    var fk_casa = req.body.casaServer;
 
     if (nome == undefined) {
         res.status(400).send("Nome undefined");
@@ -52,14 +52,14 @@ function cadastrar(req, res) {
         res.status(400).send("Repetir senha undefined");
     } else if (dtNascimento == undefined) {
         res.status(400).send("Nascimento undefined");
-    } else if (casa == undefined) {
+    } else if (fk_casa == undefined) {
         res.status(400).send("Casa undefined");
     } else if (senha !== repSenha) {
         res.status(400).send("As senhas não coincidem");
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha, dtNascimento, casa)
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, dtNascimento, fk_casa)
             .then(
                 function (resultado) {
                     res.json(resultado);

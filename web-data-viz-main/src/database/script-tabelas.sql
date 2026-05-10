@@ -8,7 +8,6 @@ comandos para mysql server
 create database harrypotter;
 use harrypotter;
 
-
 CREATE TABLE usuario (
     idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
@@ -17,7 +16,16 @@ CREATE TABLE usuario (
     senha VARCHAR(255),
     dtNascimento DATE,
     dtCriacao DATETIME DEFAULT CURRENT_TIMESTAMP,
-    casa VARCHAR(45)
+    fk_casa INT,
+    
+    CONSTRAINT fk_usuario_casa
+        FOREIGN KEY (fk_casa)
+        REFERENCES casa(idCasa)
+);
+
+CREATE TABLE casa (
+    idCasa INT PRIMARY KEY AUTO_INCREMENT,
+    nomeCasa VARCHAR(45)
 );
 
 
@@ -26,6 +34,7 @@ CREATE TABLE resultado (
     pontuacao INT,
     dtQuiz DATETIME DEFAULT CURRENT_TIMESTAMP,
     fk_usuario INT,
+    
     CONSTRAINT fk_resultado_usuario
         FOREIGN KEY (fk_usuario)
         REFERENCES usuario(idUsuario)

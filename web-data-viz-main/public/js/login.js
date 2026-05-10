@@ -61,8 +61,7 @@ function entrar() {
                 console.log(JSON.stringify(json));
                 localStorage.EMAIL_USUARIO = json.email;
                 localStorage.NOME_USUARIO = json.nome;
-                localStorage.ID_USUARIO = json.id;
-                localStorage.DASHBOARD = json.dashboard;
+                localStorage.ID_USUARIO = json.idUsuario;
 
                 setTimeout(() => {
                     window.location = "./home.html";
