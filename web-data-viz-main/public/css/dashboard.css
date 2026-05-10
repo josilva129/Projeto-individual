@@ -11,7 +11,24 @@ body{
     background-size: cover;
 }
 
+#acessoNegado{
+    display: none;
+    max-width: 1280px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 500px;
+    color: #fff;
+    gap: 10px;
+}
 
+
+#acessoNegado p{
+    font-size: 18px;
+    min-height: 24px;
+}
 
 .main{
    width: 100%;
@@ -21,7 +38,6 @@ body{
    gap: 25px;
    margin: auto;
    padding-top: 30px;
-
 }
 
 .GraficosAuxiliares{

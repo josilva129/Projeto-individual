@@ -35,11 +35,56 @@ function entrar() {
 
     let emailValido = validaEmail()
     let senhaValida = validaSenha()
+
+    var emailVar = input_email.value
+    var senhaVar = input_senha.value
     
      if(emailValido && senhaValida){
         setTimeout(() => {
-            window.location.href = './home.html'
+
+            fetch("usuarios/autenticar", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        })
+    }).then(function(resposta){
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if(resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                localStorage.EMAIL_USUARIO = json.email;
+                localStorage.NOME_USUARIO = json.nome;
+                localStorage.ID_USUARIO = json.id;
+                localStorage.DASHBOARD = json.dashboard;
+
+                setTimeout(() => {
+                    window.location = "./home.html";
+                }, 1000)
+            });
+        } else {
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.log(texto);
+            });
+        }
+    }).catch(function(erro) {
+        console.log(erro)
+    })
+
+    return false;
+            
         }, 1000)
     }
+
+    
    
 }
