@@ -70,14 +70,14 @@
       color: #000000;
     }
 
-    .cadastro {
+    .cadastro, .sair {
       background-color: #d4af37;
       color: #000000;
       border: 1px solid #d4af37;
       transition: 0.2s;
     }
 
-    .cadastro:hover{
+    .cadastro:hover, .sair:hover{
       background-color: transparent;
       color: #ffffff;
     }
