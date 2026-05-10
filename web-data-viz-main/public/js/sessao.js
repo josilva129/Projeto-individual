@@ -24,7 +24,7 @@ function acessoPermitido() {
     return true;
 }
 
-function sair() {
+function encerrarSessao() {
     localStorage.clear();
     window.location = './login.html'
 }

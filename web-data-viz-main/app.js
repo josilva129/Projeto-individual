@@ -26,7 +26,7 @@ app.use(cors());
 app.use("/usuarios", usuarioRouter);
 
 app.get("/", (req, res) => {
-    res.redirect("/login.html");
+    res.redirect("/home.html");
 });
 
 
