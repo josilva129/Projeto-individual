@@ -1,24 +1,37 @@
 function acessoPermitido() {
 
     let main = document.querySelector('.main')
+    let acessoNegado = document.getElementById('acessoNegado')
+    let textoRedirecionando = document.getElementById('redirecionando')
+
     let contador = 5
 
     var idUsuario = localStorage.ID_USUARIO
 
     if (!idUsuario) {
-        main.style.display = 'none'
-        acessoNegado.style.display = 'flex'
+        if (main) {
+            main.style.display = 'none'
+        }
 
-        setInterval(() => {
-            document.getElementById('redirecionando').innerHTML = `Redirecionando para a página HOME <b>${contador}</b>`;
+        if (acessoNegado) {
+            acessoNegado.style.display = 'flex'
+        }
+
+        let redireciona = setInterval(() => {
+
+            if(textoRedirecionando){
+                document.getElementById('redirecionando').innerHTML = `Redirecionando para a página HOME <b>${contador}</b>`;
             contador--
+            }
 
             if (contador < 0) {
-                let redireciona = window.location = './home.html'
+                 window.location = './home.html'
 
                 clearInterval(redireciona)
             }
         }, 1000)
+
+        return false
 
     }
     return true;

@@ -11,7 +11,7 @@ body{
 }
 
 
-.main{
+.corpo{
     width: 100%;
     max-width: 1280px;
     margin: auto;
@@ -33,12 +33,12 @@ body{
     margin-bottom: 25px;
 }
 
-.main img{
+.corpo img{
     height: 250px;
     width: 163px;
 }
 
-.main p{
+.corpo p{
     width: 70%;
     font-family: "Sofia Sans Condensed", sans-serif;
     font-size: 22px;

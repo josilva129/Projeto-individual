@@ -1,7 +1,10 @@
-let buttons = document.querySelector('.loginCadastro')
-let btnSair = document.querySelector('.sair')
+
+
 
 function validado(){
+
+    let btnSair = document.querySelector('.sair')
+    let buttons = document.querySelector('.loginCadastro')
 
     let permitido = acessoPermitido()
 
