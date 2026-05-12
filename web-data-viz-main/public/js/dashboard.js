@@ -125,75 +125,7 @@ function validado() {
       }
     });
 
-    const ctxBilheteria = document.getElementById('bilheteria');
-
-    new Chart(ctxBilheteria, {
-      type: 'line',
-      data: {
-        labels: [
-          "Japão",
-          "Alemanha",
-          "França",
-          "México",
-          "EUA",
-          "Brasil",
-          "Reino Unido"
-        ],
-        datasets: [{
-          label: 'Dados do Google Trends',
-          data: [
-            79,
-            81,
-            85,
-            89,
-            94,
-            97,
-            100
-          ],
-          borderColor: '#d4af37',
-          backgroundColor: 'rgba(212, 175, 55, 0.2)',
-          tension: 0.3,
-          pointBackgroundColor: '#fff',
-          pointBorderColor: '#d4af37',
-          pointRadius: 5,
-          fill: true
-        }]
-      },
-      options: {
-        responsive: true,
-
-        plugins: {
-          legend: {
-            display: false
-          },
-          title: {
-            display: true,
-            text: 'Países que mais pesquisam Harry potter (Ultimos 5 anos)',
-            color: '#ffffff'
-          }
-        },
-
-        scales: {
-          x: {
-            ticks: {
-              color: '#ffffff'
-            },
-            grid: {
-              color: 'rgba(255,255,255,0.1)'
-            }
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: '#ffffff'
-            },
-            grid: {
-              color: 'rgba(255,255,255,0.1)'
-            }
-          }
-        }
-      }
-    });
+    
   }
 
   return true

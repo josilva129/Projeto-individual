@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
+    min-height: 100vh;
 }
 
 #acessoNegado{
@@ -19,11 +20,10 @@ body{
     justify-content: center;
     margin: auto;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     color: #fff;
     gap: 10px;
 }
-
 
 #acessoNegado p{
     font-size: 18px;
@@ -34,44 +34,42 @@ body{
    width: 100%;
    max-width: 1280px;
    display: flex;
-   flex-direction: column;
-   gap: 25px;
    margin: auto;
-   padding-top: 30px;
+   padding: 20px 0;
+   gap: 10px;
 }
 
 .GraficosAuxiliares{
-    height: 100%;
-    width: 100%;
     display: flex;
-    gap: 10px;
-    
-}
-
-.graficoFilmes, .graficoFeiticos, .kpis{
-    flex: 1;
-    padding: 5px;
-    display: flex;
-}
-
-.graficoFilmes, .graficoFeiticos, .usuarios, .totFilmes{
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(10px);
-
-    border-radius: 16px;
-    height: 250px;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    padding: 10px;
-}
-
-.kpis{
-    padding: 0px;
     flex-direction: column;
     gap: 10px;
-    height: 250px;
+    flex: 1;
+}
+
+.graficoFilmes, 
+.graficoFeiticos{
+    height: 230px;
+    padding: 5px;
+    align-items: center;
+     display: flex;
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);  
+   
+}
+
+
+.kpis{
+    display: flex;
+    width: 100%;
+    gap: 10px;
     color: #fff;
+    justify-content: center;
 }
 
 .kpis p{
@@ -82,44 +80,27 @@ body{
     color: #d4af37;
 }
 
-.usuarios, .totFilmes{
+.kpiDash{
     width: 100%;
-    height: 50%;
+    height: 110px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
 }
 
 .graficoPrincipal{
-  height: 350px;
   display: flex;
-  align-items: center;
-  padding: 0px;
-  gap: 20px;
-}
-
-.bilheteria, .tabela{
-  width: 50%;
-  height: 350px;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.bilheteria{
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 2;
+  gap: 10px;
 }
 
 .tabela{
-    width: 50%;
-    color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
+  width: 100%;
+  min-height: 350px;
+  color: #fff;
 }
 
 .linha{
@@ -133,6 +114,8 @@ body{
     font-weight: bold;
     background-color: #d4af37d2;
     color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .divisao{
