@@ -70,10 +70,9 @@ h1 {
     height: 100vh;
     background-color: #000000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
-    gap: 5px;
 }
 
 .card-casas, .card-persona{
@@ -118,7 +117,7 @@ h1 {
     height: 20px;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     gap: 30px;
 }
