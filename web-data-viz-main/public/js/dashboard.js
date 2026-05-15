@@ -143,6 +143,7 @@ function buscarCasa(){
     document.getElementById('casaUsuarios').innerHTML = dados[0].casa;
   })
 }
+
 //Calculo Matematico
 function arqComp(){
   let bilheteria = [

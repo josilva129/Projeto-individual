@@ -242,6 +242,8 @@ function resultadoFinal(){
             descricao = 'Seu nível de conhecimento é digno dos maiores bruxos da história. Você realmente conhece profundamente o universo de Harry Potter.'
         }
 
+        salvarPontos(pontuacao)
+
         carregando.innerHTML = 'Carregando resultado...'
 
         setTimeout(() => {
@@ -253,6 +255,29 @@ function resultadoFinal(){
             desc.innerHTML = descricao
         }, 2000)
 
+}
+
+function salvarPontos(pontuacao){
+    fetch("/quiz/salvarPontuacao", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            pontuacaoServer: pontuacao,
+            fkUsuarioServer: localStorage.ID_USUARIO
+        })
+    })
+    .then(function(res){
+        if(res.ok){
+            console.log("Pontuação salva")
+        } else {
+            console.log("Erro ao salvar")
+        }
+    })
+    .catch(function(erro){
+        console.log(erro)
+    })
 }
 
 carregarPergunta();
