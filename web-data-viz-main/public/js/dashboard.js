@@ -143,9 +143,62 @@ function buscarCasa(){
     document.getElementById('casaUsuarios').innerHTML = dados[0].casa;
   })
 }
+//Calculo Matematico
+function arqComp(){
+  let bilheteria = [
+    {
+      filme: 'As Relíquias da Morte',
+      valor: 1.34
+    },
+    {
+      filme: 'Harry Potter e a Pedra Filosofal',
+      valor: 1.02
+    },
+    {
+      filme: 'Harry Potter e as Relíquias da Morte ',
+      valor: 0.972
+    },
+    {
+      filme: 'Harry Potter e a Ordem da Fênix ',
+      valor: 0.942
+    },
+    {
+      filme: 'Harry Potter e o Enigma do Príncipe',
+      valor: 0.934
+    },
+    {
+      filme: 'Harry Potter e a Câmara Secreta',
+      valor: 0.926
+    },
+    {
+      filme: 'Harry Potter e o Cálice de Fogo',
+      valor: 0.896
+    },
+     {
+      filme: 'Harry Potter e o Prisioneiro de Azkaban',
+      valor: 0.795
+    },
+  ]
+
+  let total = 0
+
+  for(let i = 0; i < bilheteria.length; i++){
+    total += bilheteria[i].valor
+  }
+
+  let moedaTotal = total.toLocaleString('en-US', 
+    {
+      style: 'currency',
+      currency: 'USD'
+    })
+
+  bilhoes.innerHTML = `${moedaTotal} Bilhões`
+  return true
+}
 
 validado()
 buscarCasa()
+arqComp()
 
 
 
