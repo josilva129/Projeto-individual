@@ -27,7 +27,7 @@ app.use(cors());
 
 app.use("/usuarios", usuarioRouter);
 app.use("/dashboard", dashboardRouter);
-app.use("./quiz", quizRouter);
+app.use("/quiz", quizRouter);
 
 app.get("/", (req, res) => {
     res.redirect("/home.html");

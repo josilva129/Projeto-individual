@@ -47,7 +47,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 90%;
-    min-height: 450px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -55,6 +54,11 @@ body {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 68px;
+}
+
+.tamanhoQuiz{
+    min-height: 450px;
 }
 
 .quiz h1 {
@@ -91,4 +95,51 @@ body {
 .quiz a:hover {
     background-color: transparent;
     color: #ffffff;
+}
+
+/* TELA RESULTADO QUIZ*/
+.tabela{
+  width: 50%;
+  height: auto;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.linha div {
+    flex: 1;
+    text-align: center;
+}
+
+.cabecalho{
+    font-weight: bold;
+    background-color: #d4af37d2;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.divisao{
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);  
+}
+
+.semResultado{
+    padding: 30px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
 }

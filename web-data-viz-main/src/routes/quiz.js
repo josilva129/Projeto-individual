@@ -7,4 +7,8 @@ router.post("/salvarPontuacao", function(req, res){
     quizController.salvarPontuacao(req, res);
 });
 
+router.get("/listarResultados/:fk_usuario", function(req, res){
+    quizController.listarResultados(req, res);
+});
+
 module.exports = router;

@@ -136,6 +136,7 @@ body {
 #resultado #desc{
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 80%;
 }
 
 #resultado a{
