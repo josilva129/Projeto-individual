@@ -9,14 +9,12 @@ function carregarResultado(){
         console.log(dados);
 
         linhasResultados.innerHTML = ''
-
         if(dados.length == 0){
             linhasResultados.innerHTML = `
                 <div class="semResultado">
                     Você ainda não realizou nenhum quiz
                 </div>
             `;
-
             return
         }
 
