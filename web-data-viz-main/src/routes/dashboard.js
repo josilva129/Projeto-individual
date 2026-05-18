@@ -8,4 +8,8 @@ router.get("/casaUsuarios", function(req, res){
     dashboardController.casaUsuarios(req, res);
 });
 
+router.get("/feiticos", function (req, res) {
+    dashboardController.buscarFeiticos(req, res);
+});
+
 module.exports = router;

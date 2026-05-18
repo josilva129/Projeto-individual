@@ -15,7 +15,19 @@ function casaUsuarios() {
     return database.executar(instrucaoSql);
 }
 
+function buscarFeiticos() {
+
+    var instrucaoSql = `
+        SELECT nomeFeitico, popularidade
+        FROM feitico
+        ORDER BY popularidade DESC;
+    `;
+
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    casaUsuarios
+    casaUsuarios,
+    buscarFeiticos
 }
 

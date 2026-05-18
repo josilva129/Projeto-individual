@@ -17,7 +17,7 @@ var app = express();
 
 var usuarioRouter = require("./src/routes/usuarios");
 var dashboardRouter = require("./src/routes/dashboard");
-var quizRouter = require("./src/routes/quiz");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +27,7 @@ app.use(cors());
 
 app.use("/usuarios", usuarioRouter);
 app.use("/dashboard", dashboardRouter);
-app.use("/quiz", quizRouter);
+
 
 app.get("/", (req, res) => {
     res.redirect("/home.html");
