@@ -13,7 +13,6 @@ de interesse pessoal.
 ## Funcionalidades
 - Cadastro de usuários
 - Login e autenticação
-- Quiz interativo sobre Harry Potter
 - Dashboard com indicadores
 - Sistema de login e logout
 
@@ -30,8 +29,6 @@ de interesse pessoal.
 <b>DASHBOARD</b>
 <img width="1891" height="608" alt="image" src="https://github.com/user-attachments/assets/60663169-7e8f-479b-9f0d-04b98749ae49" />
 
-<b>QUIZ</b>
-<img width="1908" height="904" alt="image" src="https://github.com/user-attachments/assets/d4af3e89-e9c6-454a-8011-4cf532284424" />
 
 
 
